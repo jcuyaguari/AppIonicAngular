@@ -1,0 +1,40 @@
+.wrap-input{
+    border-left-width: 2px;
+    width: 97%;
+    background-color: rgba(230, 231, 231, 0.8);
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 2px 2px 5px 5px rgba(70, 122, 161, 0.12);
+    font-size: 16px;
+    line-height: 1.2;
+    border:none;
+    outline: none;
+    height: 46px;
+}
+
+.ion-input{
+    margin: 16px;
+    display: block;
+    width: 10%;
+    font-family: Josefin Sans;
+    font-size: 16px;
+    line-height: 1.2;
+    border:none;
+    outline: none;
+    height: 46px;
+    padding: 0 20px 0 23px;
+}
+
+.ion-label{
+    font-size: 96%;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-weight: 900;
+    text-align: center;
+    background: #5f6eb7;
+    color: #ffffff;
+    border-radius: 6px;
+    
+}
+.ion-card{
+    background-color: black;
+}

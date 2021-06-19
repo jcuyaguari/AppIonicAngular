@@ -1,0 +1,126 @@
+ion-header {
+    ion-toolbar {
+      --background: rgba(0,0,0,0);
+    }
+    
+    .titles {
+      position: relative;
+      padding: 0 1.2rem;
+      h4, h6 {
+        margin: 0;
+        margin-bottom: 4px;
+        ion-icon {
+          vertical-align: middle;
+        }
+      }
+      h4 {
+        font-weight: 900;
+        font-size: 26px;
+      }
+      h6 {
+        font-weight: 600;
+      }
+    }
+  
+    // img {
+    //   position: absolute;
+    //   top: -110px;
+    // }
+  
+  }
+  
+  ion-tab-bar {
+    border-radius: 30px 30px 0 0;
+  }
+   
+  ion-content {
+    --background: #fafafa;
+    
+    .container {
+  
+      margin-top: 38px;
+      
+      ion-card {
+        --padding-start: 0px;
+        --inner-padding-end: 0px;
+        width: 260px;
+        box-shadow: none;
+        border-radius: 18%;
+  
+        .cover {
+          img {
+            border-radius: 25%;
+          }
+        }
+  
+        ion-col {
+          color: #1f2120;
+          del {
+            color: #726c6c;
+          }
+          ion-card-title, ion-card-subtitle {
+            font-weight: bold;
+            padding-left: 12px;
+          }
+          ion-button {
+            --box-shadow: none;
+            --border-radius: 12px;
+          }
+        }
+  
+      }
+  
+    }
+  
+    ion-card {
+      margin: 0px;
+      box-shadow: none;
+      border-radius: 10px;
+      border-top: 1px solid #1b1c21;
+      background: #8d9c9875;
+      padding-top: 1px;
+      border-bottom: groove;
+
+      .cover {
+        img {
+          border-radius: 25%;
+        }
+      }
+  
+      ion-card-content {
+        word-wrap: break-word;
+        padding: 0;
+      }
+  
+      ion-col {
+        color: #1f2120;
+        del {
+          color: #726c6c;
+        }
+        ion-card-title, ion-card-subtitle {
+          font-size: 92%;
+          font-weight: bold;
+          padding-bottom: 6px;
+          padding-left: 18px;
+          color: rgb(32, 34, 34);
+        }
+        ion-button {
+          --box-shadow: none;
+          --border-radius: 12px;
+        }
+      }
+  
+    }
+  
+    ion-button {
+      transform: scale(.8, .8);
+    }
+    
+  }
+
+/*   .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  } */

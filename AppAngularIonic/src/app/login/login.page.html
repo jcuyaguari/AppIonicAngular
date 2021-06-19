@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons> -->
+ 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="card">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <img src="../assets/logo.png" alt="">
+    </ion-toolbar>
+      
+    
+   
+  </ion-header>
+
+  <ion-card>
+    <ion-card-content >
+      <ion-card-title class="ion-text-center">Tienda</ion-card-title>
+      <ion-card-subtitle class="ion-text-center">Cooperativa Crea</ion-card-subtitle>
+    </ion-card-content>
+    
+  </ion-card>
+
+  <ion-card >
+  
+    <ion-item class="ion-activated">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <ion-label>Inicio Sesión</ion-label>
+    </ion-item>
+
+    <ion-card-content >
+    
+      <ion-item>
+          <ion-label class="label" > Usuario: </ion-label>
+      </ion-item>
+      <ion-item>
+          <ion-input type="text" [(ngModel)]="persona.setCedula" placeholder="Digite su usuario"> </ion-input>
+      </ion-item>
+      <ion-item>
+          
+      </ion-item>
+      <ion-item>
+         <ion-label class="label"> Contraseña:  </ion-label>
+      </ion-item>
+      <ion-item>
+          <ion-input type="password" [(ngModel)]="persona.setContrasenia" placeholder="Digite su contraseña"> </ion-input>
+      </ion-item>
+      
+      <hr class="divider light my-4" />
+     
+    
+        <ion-button color="primary" type="submit" expand="block" (click)="login(persona.getCedula,persona.contrasenia)">INGRESAR</ion-button>
+          <div class="ion-text-center ion-margin-top">
+            <a (click)="alertaPws()"><small>Olvidé mi Contraseña</small></a>
+          </div>
+    
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-toolbar>
+      <img src="../assets/logo.png" alt="">
+    </ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-app>
+    
+    <ion-menu side="start" content-id="main-content">
+      <ion-header>
+        <ion-toolbar translucent>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item>
+            <ion-icon name="search-circle-sharp" slot="start"></ion-icon>
+            <ion-label routerLink="/inicio">Productos</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="cart-sharp"  slot="start"></ion-icon>
+            <ion-label routerLink="/carrito">Carrito</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="duplicate"  slot="start"></ion-icon>
+            <ion-label routerLink="/ingreso-productos">Ingreso Productos</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="pencil" slot="start"></ion-icon>
+            <ion-label routerLink="/actualizar-producto">Actualizar Productos</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="card-sharp" slot="start"></ion-icon>
+            <ion-label>Pagos</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="exit-sharp" slot="start"></ion-icon>
+            <ion-label (click)="alertaSalir()">Salir</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <div class="ion-page" id="main-content" >
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title class="ion-text-center">Carrito de Compras</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+     
+        <ion-grid [fixed]="true" *ngIf="carrito.length>0;else vacio">
+          <ion-row >
+            <ion-col>
+              Nombre
+            </ion-col>
+            <ion-col>
+              Cantid
+            </ion-col>
+            <ion-col>
+              Precio
+            </ion-col>
+            <ion-col>
+              Acción
+            </ion-col>
+          </ion-row>
+          <ion-row *ngFor="let item of carrito">
+            <ion-col>
+              {{item.nombre}}
+            </ion-col>
+            <ion-col>
+              <ion-input type="number" step="1" min="0" value ="1"></ion-input>
+            </ion-col>
+            <ion-col>
+              $ {{item.precio}}
+            </ion-col>
+            <ion-col>
+              <ion-button (click)="eliminarProducto(item)">Eliminar</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              SubTotal: $ {{total}}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              Total: $ {{total}}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    
+    </div>
+
+    <ng-template #vacio>
+      <ion-card class="ion-text-center">
+        <strong>No existe elementos seleccionados</strong>
+      </ion-card>        
+    </ng-template>
+  
+  </ion-app>
+
+</ion-content>
